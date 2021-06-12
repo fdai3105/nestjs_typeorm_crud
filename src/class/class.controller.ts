@@ -12,6 +12,7 @@ import {
 import { ClassService } from './class.service';
 import { CreateClassDto } from './dto/create-class.dto';
 import { UpdateClassDto } from './dto/update-class.dto';
+import { Class } from './entities/class.entity';
 
 @Controller('class')
 export class ClassController {
@@ -24,7 +25,7 @@ export class ClassController {
   }
 
   @Get()
-  findAll() {
+  findAll(): Promise<Class[]> {
     return this.classService.findAll();
   }
 

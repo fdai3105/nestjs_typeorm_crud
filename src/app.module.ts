@@ -7,6 +7,8 @@ import { Connection } from 'typeorm';
 import { ClassModule } from './class/class.module';
 import { User } from './user/entities/user.entity';
 import { Class } from './class/entities/class.entity';
+import { ClassExits } from './rules/class.exits';
+import { ClassService } from './class/class.service';
 
 @Module({
   imports: [
